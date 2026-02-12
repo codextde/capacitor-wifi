@@ -35,10 +35,10 @@ npx cap sync
 ### scanWifi()
 
 ```typescript
-scanWifi() => Promise<ScanWifiResult>
+scanWifi() => any
 ```
 
-**Returns:** <code>Promise&lt;<a href="#scanwifiresult">ScanWifiResult</a>&gt;</code>
+**Returns:** <code>any</code>
 
 --------------------
 
@@ -46,10 +46,10 @@ scanWifi() => Promise<ScanWifiResult>
 ### getCurrentWifi()
 
 ```typescript
-getCurrentWifi() => Promise<GetCurrentWifiResult>
+getCurrentWifi() => any
 ```
 
-**Returns:** <code>Promise&lt;<a href="#getcurrentwifiresult">GetCurrentWifiResult</a>&gt;</code>
+**Returns:** <code>any</code>
 
 --------------------
 
@@ -57,14 +57,14 @@ getCurrentWifi() => Promise<GetCurrentWifiResult>
 ### connectToWifiBySsidAndPassword(...)
 
 ```typescript
-connectToWifiBySsidAndPassword(connectToWifiRequest: ConnectToWifiRequest) => Promise<ConnectToWifiResult>
+connectToWifiBySsidAndPassword(connectToWifiRequest: ConnectToWifiRequest) => any
 ```
 
 | Param                      | Type                                                                  |
 | -------------------------- | --------------------------------------------------------------------- |
 | **`connectToWifiRequest`** | <code><a href="#connecttowifirequest">ConnectToWifiRequest</a></code> |
 
-**Returns:** <code>Promise&lt;<a href="#connecttowifiresult">ConnectToWifiResult</a>&gt;</code>
+**Returns:** <code>any</code>
 
 --------------------
 
@@ -72,14 +72,14 @@ connectToWifiBySsidAndPassword(connectToWifiRequest: ConnectToWifiRequest) => Pr
 ### connectToWifiBySsidPrefixAndPassword(...)
 
 ```typescript
-connectToWifiBySsidPrefixAndPassword(connectToWifiPrefixRequest: ConnectToWifiPrefixRequest) => Promise<ConnectToWifiResult>
+connectToWifiBySsidPrefixAndPassword(connectToWifiPrefixRequest: ConnectToWifiPrefixRequest) => any
 ```
 
 | Param                            | Type                                                                              |
 | -------------------------------- | --------------------------------------------------------------------------------- |
 | **`connectToWifiPrefixRequest`** | <code><a href="#connecttowifiprefixrequest">ConnectToWifiPrefixRequest</a></code> |
 
-**Returns:** <code>Promise&lt;<a href="#connecttowifiresult">ConnectToWifiResult</a>&gt;</code>
+**Returns:** <code>any</code>
 
 --------------------
 
@@ -87,10 +87,10 @@ connectToWifiBySsidPrefixAndPassword(connectToWifiPrefixRequest: ConnectToWifiPr
 ### checkPermissions()
 
 ```typescript
-checkPermissions() => Promise<PermissionStatus>
+checkPermissions() => any
 ```
 
-**Returns:** <code>Promise&lt;<a href="#permissionstatus">PermissionStatus</a>&gt;</code>
+**Returns:** <code>any</code>
 
 --------------------
 
@@ -98,10 +98,10 @@ checkPermissions() => Promise<PermissionStatus>
 ### requestPermissions()
 
 ```typescript
-requestPermissions() => Promise<PermissionStatus>
+requestPermissions() => any
 ```
 
-**Returns:** <code>Promise&lt;<a href="#permissionstatus">PermissionStatus</a>&gt;</code>
+**Returns:** <code>any</code>
 
 --------------------
 
@@ -109,8 +109,10 @@ requestPermissions() => Promise<PermissionStatus>
 ### disconnectAndForget()
 
 ```typescript
-disconnectAndForget() => Promise<void>
+disconnectAndForget() => any
 ```
+
+**Returns:** <code>any</code>
 
 --------------------
 
@@ -120,20 +122,20 @@ disconnectAndForget() => Promise<void>
 
 #### ScanWifiResult
 
-| Prop        | Type                     |
-| ----------- | ------------------------ |
-| **`wifis`** | <code>WifiEntry[]</code> |
+| Prop        | Type            |
+| ----------- | --------------- |
+| **`wifis`** | <code>{}</code> |
 
 
 #### WifiEntry
 
-| Prop                | Type                          |
-| ------------------- | ----------------------------- |
-| **`bssid`**         | <code>string</code>           |
-| **`capabilities`**  | <code>WifiCapability[]</code> |
-| **`ssid`**          | <code>string</code>           |
-| **`level`**         | <code>number</code>           |
-| **`isCurrentWifi`** | <code>boolean</code>          |
+| Prop                | Type                 |
+| ------------------- | -------------------- |
+| **`bssid`**         | <code>string</code>  |
+| **`capabilities`**  | <code>{}</code>      |
+| **`ssid`**          | <code>string</code>  |
+| **`level`**         | <code>number</code>  |
+| **`isCurrentWifi`** | <code>boolean</code> |
 
 
 #### GetCurrentWifiResult
@@ -143,20 +145,20 @@ disconnectAndForget() => Promise<void>
 | **`currentWifi`** | <code><a href="#wifientry">WifiEntry</a></code> |
 
 
-#### ConnectToWifiResult
-
-| Prop             | Type                                            |
-| ---------------- | ----------------------------------------------- |
-| **`wasSuccess`** | <code>true</code>                               |
-| **`wifi`**       | <code><a href="#wifientry">WifiEntry</a></code> |
-
-
 #### ConnectToWifiRequest
 
 | Prop           | Type                |
 | -------------- | ------------------- |
 | **`ssid`**     | <code>string</code> |
 | **`password`** | <code>string</code> |
+
+
+#### ConnectToWifiResult
+
+| Prop             | Type                                            |
+| ---------------- | ----------------------------------------------- |
+| **`wasSuccess`** | <code>true</code>                               |
+| **`wifi`**       | <code><a href="#wifientry">WifiEntry</a></code> |
 
 
 #### ConnectToWifiPrefixRequest
