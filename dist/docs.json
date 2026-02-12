@@ -7,9 +7,9 @@
     "methods": [
       {
         "name": "scanWifi",
-        "signature": "() => Promise<ScanWifiResult>",
+        "signature": "() => any",
         "parameters": [],
-        "returns": "Promise<ScanWifiResult>",
+        "returns": "any",
         "tags": [],
         "docs": "",
         "complexTypes": [
@@ -19,9 +19,9 @@
       },
       {
         "name": "getCurrentWifi",
-        "signature": "() => Promise<GetCurrentWifiResult>",
+        "signature": "() => any",
         "parameters": [],
-        "returns": "Promise<GetCurrentWifiResult>",
+        "returns": "any",
         "tags": [],
         "docs": "",
         "complexTypes": [
@@ -31,7 +31,7 @@
       },
       {
         "name": "connectToWifiBySsidAndPassword",
-        "signature": "(connectToWifiRequest: ConnectToWifiRequest) => Promise<ConnectToWifiResult>",
+        "signature": "(connectToWifiRequest: ConnectToWifiRequest) => any",
         "parameters": [
           {
             "name": "connectToWifiRequest",
@@ -39,18 +39,18 @@
             "type": "ConnectToWifiRequest"
           }
         ],
-        "returns": "Promise<ConnectToWifiResult>",
+        "returns": "any",
         "tags": [],
         "docs": "",
         "complexTypes": [
-          "ConnectToWifiResult",
-          "ConnectToWifiRequest"
+          "ConnectToWifiRequest",
+          "ConnectToWifiResult"
         ],
         "slug": "connecttowifibyssidandpassword"
       },
       {
         "name": "connectToWifiBySsidPrefixAndPassword",
-        "signature": "(connectToWifiPrefixRequest: ConnectToWifiPrefixRequest) => Promise<ConnectToWifiResult>",
+        "signature": "(connectToWifiPrefixRequest: ConnectToWifiPrefixRequest) => any",
         "parameters": [
           {
             "name": "connectToWifiPrefixRequest",
@@ -58,20 +58,20 @@
             "type": "ConnectToWifiPrefixRequest"
           }
         ],
-        "returns": "Promise<ConnectToWifiResult>",
+        "returns": "any",
         "tags": [],
         "docs": "",
         "complexTypes": [
-          "ConnectToWifiResult",
-          "ConnectToWifiPrefixRequest"
+          "ConnectToWifiPrefixRequest",
+          "ConnectToWifiResult"
         ],
         "slug": "connecttowifibyssidprefixandpassword"
       },
       {
         "name": "checkPermissions",
-        "signature": "() => Promise<PermissionStatus>",
+        "signature": "() => any",
         "parameters": [],
-        "returns": "Promise<PermissionStatus>",
+        "returns": "any",
         "tags": [],
         "docs": "",
         "complexTypes": [
@@ -81,9 +81,9 @@
       },
       {
         "name": "requestPermissions",
-        "signature": "() => Promise<PermissionStatus>",
+        "signature": "() => any",
         "parameters": [],
-        "returns": "Promise<PermissionStatus>",
+        "returns": "any",
         "tags": [],
         "docs": "",
         "complexTypes": [
@@ -93,9 +93,9 @@
       },
       {
         "name": "disconnectAndForget",
-        "signature": "() => Promise<void>",
+        "signature": "() => any",
         "parameters": [],
-        "returns": "Promise<void>",
+        "returns": "any",
         "tags": [],
         "docs": "",
         "complexTypes": [],
@@ -119,7 +119,7 @@
           "complexTypes": [
             "WifiEntry"
           ],
-          "type": "WifiEntry[]"
+          "type": "{}"
         }
       ]
     },
@@ -144,7 +144,7 @@
           "complexTypes": [
             "WifiCapability"
           ],
-          "type": "WifiCapability[]"
+          "type": "{}"
         },
         {
           "name": "ssid",
@@ -190,6 +190,29 @@
       ]
     },
     {
+      "name": "ConnectToWifiRequest",
+      "slug": "connecttowifirequest",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "ssid",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "password",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        }
+      ]
+    },
+    {
       "name": "ConnectToWifiResult",
       "slug": "connecttowifiresult",
       "docs": "",
@@ -211,29 +234,6 @@
             "WifiEntry"
           ],
           "type": "WifiEntry"
-        }
-      ]
-    },
-    {
-      "name": "ConnectToWifiRequest",
-      "slug": "connecttowifirequest",
-      "docs": "",
-      "tags": [],
-      "methods": [],
-      "properties": [
-        {
-          "name": "ssid",
-          "tags": [],
-          "docs": "",
-          "complexTypes": [],
-          "type": "string"
-        },
-        {
-          "name": "password",
-          "tags": [],
-          "docs": "",
-          "complexTypes": [],
-          "type": "string | undefined"
         }
       ]
     },
